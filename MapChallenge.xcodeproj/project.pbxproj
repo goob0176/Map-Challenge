@@ -13,9 +13,7 @@
 		B7487FCB29A10ECA00FEB9BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7487FC929A10ECA00FEB9BD /* Main.storyboard */; };
 		B7487FCD29A10ECC00FEB9BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7487FCC29A10ECC00FEB9BD /* Assets.xcassets */; };
 		B7487FD029A10ECC00FEB9BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7487FCE29A10ECC00FEB9BD /* LaunchScreen.storyboard */; };
-		B7487FDB29A10ECC00FEB9BD /* MapChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FDA29A10ECC00FEB9BD /* MapChallengeTests.swift */; };
 		B7487FE529A10ECC00FEB9BD /* MapChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FE429A10ECC00FEB9BD /* MapChallengeUITests.swift */; };
-		B7487FE729A10ECC00FEB9BD /* MapChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FE629A10ECC00FEB9BD /* MapChallengeUITestsLaunchTests.swift */; };
 		B7487FF429A10F0E00FEB9BD /* GeocodingLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FF329A10F0E00FEB9BD /* GeocodingLocationModel.swift */; };
 		B7487FF929A10F5500FEB9BD /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FF829A10F5500FEB9BD /* Requestable.swift */; };
 		B7487FFC29A10F7900FEB9BD /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FFB29A10F7900FEB9BD /* NetworkRequest.swift */; };
@@ -31,6 +29,9 @@
 		B748801C29A116A600FEB9BD /* WeatherRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748801B29A116A600FEB9BD /* WeatherRepositoryType.swift */; };
 		B748801E29A1172F00FEB9BD /* PlaceWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748801D29A1172F00FEB9BD /* PlaceWeatherModel.swift */; };
 		B748802329A11E0D00FEB9BD /* MainWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748802229A11E0D00FEB9BD /* MainWeatherModel.swift */; };
+		B748802529A122D400FEB9BD /* GeolocationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748802429A122D400FEB9BD /* GeolocationModelTests.swift */; };
+		B748802729A1232000FEB9BD /* MainWeatherModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748802629A1232000FEB9BD /* MainWeatherModelTests.swift */; };
+		B748802B29A1247B00FEB9BD /* PlaceWeatherModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748802A29A1247B00FEB9BD /* PlaceWeatherModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +61,8 @@
 		B7487FCF29A10ECC00FEB9BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7487FD129A10ECC00FEB9BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7487FD629A10ECC00FEB9BD /* MapChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7487FDA29A10ECC00FEB9BD /* MapChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapChallengeTests.swift; sourceTree = "<group>"; };
 		B7487FE029A10ECC00FEB9BD /* MapChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7487FE429A10ECC00FEB9BD /* MapChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapChallengeUITests.swift; sourceTree = "<group>"; };
-		B7487FE629A10ECC00FEB9BD /* MapChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B7487FF329A10F0E00FEB9BD /* GeocodingLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingLocationModel.swift; sourceTree = "<group>"; };
 		B7487FF829A10F5500FEB9BD /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		B7487FFB29A10F7900FEB9BD /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -79,6 +78,9 @@
 		B748801B29A116A600FEB9BD /* WeatherRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepositoryType.swift; sourceTree = "<group>"; };
 		B748801D29A1172F00FEB9BD /* PlaceWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceWeatherModel.swift; sourceTree = "<group>"; };
 		B748802229A11E0D00FEB9BD /* MainWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWeatherModel.swift; sourceTree = "<group>"; };
+		B748802429A122D400FEB9BD /* GeolocationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationModelTests.swift; sourceTree = "<group>"; };
+		B748802629A1232000FEB9BD /* MainWeatherModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWeatherModelTests.swift; sourceTree = "<group>"; };
+		B748802A29A1247B00FEB9BD /* PlaceWeatherModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceWeatherModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +150,7 @@
 		B7487FD929A10ECC00FEB9BD /* MapChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				B7487FDA29A10ECC00FEB9BD /* MapChallengeTests.swift */,
+				B748802829A1232F00FEB9BD /* Models */,
 			);
 			path = MapChallengeTests;
 			sourceTree = "<group>";
@@ -157,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				B7487FE429A10ECC00FEB9BD /* MapChallengeUITests.swift */,
-				B7487FE629A10ECC00FEB9BD /* MapChallengeUITestsLaunchTests.swift */,
 			);
 			path = MapChallengeUITests;
 			sourceTree = "<group>";
@@ -308,6 +309,24 @@
 			path = Weather;
 			sourceTree = "<group>";
 		};
+		B748802829A1232F00FEB9BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B748802929A1233800FEB9BD /* Server */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B748802929A1233800FEB9BD /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				B748802429A122D400FEB9BD /* GeolocationModelTests.swift */,
+				B748802629A1232000FEB9BD /* MainWeatherModelTests.swift */,
+				B748802A29A1247B00FEB9BD /* PlaceWeatherModelTests.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -379,6 +398,7 @@
 					};
 					B7487FD529A10ECC00FEB9BD = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = B7487FBF29A10ECA00FEB9BD;
 					};
 					B7487FDF29A10ECC00FEB9BD = {
@@ -464,7 +484,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7487FDB29A10ECC00FEB9BD /* MapChallengeTests.swift in Sources */,
+				B748802B29A1247B00FEB9BD /* PlaceWeatherModelTests.swift in Sources */,
+				B748802529A122D400FEB9BD /* GeolocationModelTests.swift in Sources */,
+				B748802729A1232000FEB9BD /* MainWeatherModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +495,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7487FE529A10ECC00FEB9BD /* MapChallengeUITests.swift in Sources */,
-				B7487FE729A10ECC00FEB9BD /* MapChallengeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,17 +716,27 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SNQA8CHVSM;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.MapChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MapChallenge";
 			};
 			name = Debug;
@@ -715,17 +746,26 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SNQA8CHVSM;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.MapChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapChallenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MapChallenge";
 			};
 			name = Release;
@@ -738,12 +778,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SNQA8CHVSM;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.MapChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = MapChallenge;
 			};
 			name = Debug;
@@ -756,12 +800,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SNQA8CHVSM;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AH.MapChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = MapChallenge;
 			};
 			name = Release;
