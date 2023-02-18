@@ -36,6 +36,8 @@
 		B748803129A129D100FEB9BD /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803029A129D100FEB9BD /* DataServiceMock.swift */; };
 		B748803329A1327300FEB9BD /* MocksDictionaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803229A1327300FEB9BD /* MocksDictionaries.swift */; };
 		B748803529A1394E00FEB9BD /* UrlRequestConstructorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803429A1394E00FEB9BD /* UrlRequestConstructorTest.swift */; };
+		B748803829A13E2300FEB9BD /* WeatherCoordinationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803729A13E2300FEB9BD /* WeatherCoordinationsModel.swift */; };
+		B748803A29A13FF400FEB9BD /* WeatherCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		B748803029A129D100FEB9BD /* DataServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceMock.swift; sourceTree = "<group>"; };
 		B748803229A1327300FEB9BD /* MocksDictionaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocksDictionaries.swift; sourceTree = "<group>"; };
 		B748803429A1394E00FEB9BD /* UrlRequestConstructorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestConstructorTest.swift; sourceTree = "<group>"; };
+		B748803729A13E2300FEB9BD /* WeatherCoordinationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordinationsModel.swift; sourceTree = "<group>"; };
+		B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordinatesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +319,7 @@
 			children = (
 				B748801D29A1172F00FEB9BD /* PlaceWeatherModel.swift */,
 				B748802229A11E0D00FEB9BD /* MainWeatherModel.swift */,
+				B748803729A13E2300FEB9BD /* WeatherCoordinationsModel.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				B748802429A122D400FEB9BD /* GeolocationModelTests.swift */,
 				B748802629A1232000FEB9BD /* MainWeatherModelTests.swift */,
 				B748802A29A1247B00FEB9BD /* PlaceWeatherModelTests.swift */,
+				B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B748803829A13E2300FEB9BD /* WeatherCoordinationsModel.swift in Sources */,
 				B748801829A1164700FEB9BD /* WeatherRepository.swift in Sources */,
 				B748800E29A111F400FEB9BD /* RequestConstructor.swift in Sources */,
 				B748800B29A1110700FEB9BD /* NetworkService.swift in Sources */,
@@ -524,6 +531,7 @@
 				B748802B29A1247B00FEB9BD /* PlaceWeatherModelTests.swift in Sources */,
 				B748803329A1327300FEB9BD /* MocksDictionaries.swift in Sources */,
 				B748802529A122D400FEB9BD /* GeolocationModelTests.swift in Sources */,
+				B748803A29A13FF400FEB9BD /* WeatherCoordinatesModel.swift in Sources */,
 				B748802D29A125A500FEB9BD /* WeatherRepositoryTests.swift in Sources */,
 				B748802729A1232000FEB9BD /* MainWeatherModelTests.swift in Sources */,
 				B748803129A129D100FEB9BD /* DataServiceMock.swift in Sources */,

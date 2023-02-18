@@ -16,11 +16,12 @@ final class PlaceWeatherModelTests: XCTestCase {
         let model = try! decoder.decode(PlaceWeatherModel.self, from: data)
         
         XCTAssertNotNil(model.main)
-        XCTAssertNotNil(model.main?.temp)
-        XCTAssertNotNil(model.main?.humidity)
+        XCTAssertNotNil(model.coord)
         
         XCTAssertEqual(model.main?.temp, 20.0)
         XCTAssertEqual(model.main?.humidity, 5)
+        
+        XCTAssertEqual(model.coord?.lat, 44.34)
+        XCTAssertEqual(model.coord?.lon, 10.99)
     }
-    
 }

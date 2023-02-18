@@ -8,6 +8,14 @@
 import Foundation
 
 struct MocksDictionariesFactory {
+    static let weatherCoordinates =
+    """
+    {
+        "lon": 10.99,
+        "lat": 44.34
+    }
+    """
+    
     static let geolocationsArray =
     """
     [
@@ -31,6 +39,10 @@ struct MocksDictionariesFactory {
     static let placeWeatherModel =
     """
     {
+      "coord": {
+        "lon": 10.99,
+        "lat": 44.34
+    },
       "main" : {
          "temp" : 20.0,
          "humidity" : 5

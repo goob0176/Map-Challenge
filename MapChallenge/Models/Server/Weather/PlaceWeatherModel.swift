@@ -7,4 +7,5 @@
 
 struct PlaceWeatherModel: Decodable {
     let main: MainWeatherModel?
+    let coord: WeatherCoordinationsModel?
 }
