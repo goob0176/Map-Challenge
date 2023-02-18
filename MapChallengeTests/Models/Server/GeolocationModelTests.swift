@@ -11,16 +11,7 @@ import XCTest
 
 final class GeocodingLocationModelTests: XCTestCase {
     func testModelParsing() {
-        let sampleJson =
-        """
-        {
-            "name" : "London",
-            "lat" : 42.9834,
-            "lon" : -81.233,
-        }
-        """
-        
-        let data = sampleJson.data(using: .utf8)!
+        let data = MocksDictionariesFactory.geolocationModel.data(using: .utf8)!
         let decoder = JSONDecoder()
         let model = try! decoder.decode(GeocodingLocationModel.self, from: data)
         

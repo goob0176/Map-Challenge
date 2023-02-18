@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DataService {
-    func handle<T: Decodable>(request: Requestable, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void)
+    func handle<T: Decodable>(request: Requestable, responseType: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void)
 }

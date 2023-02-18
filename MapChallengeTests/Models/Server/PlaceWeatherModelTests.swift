@@ -11,17 +11,7 @@ import XCTest
 
 final class PlaceWeatherModelTests: XCTestCase {
     func testModelParsing() {
-        let sampleJson =
-        """
-        {
-          "main" : {
-             "temp" : 20.0,
-             "humidity" : 5
-            }
-        }
-        """
-        
-        let data = sampleJson.data(using: .utf8)!
+        let data = MocksDictionariesFactory.placeWeatherModel.data(using: .utf8)!
         let decoder = JSONDecoder()
         let model = try! decoder.decode(PlaceWeatherModel.self, from: data)
         

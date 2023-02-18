@@ -50,7 +50,7 @@ private extension WeatherRepository {
                     }
                     completion(.success(model))
                 case .failure(let error):
-                    completion(.failure(error as? NetworkError ?? NetworkError.dataReceivingError(description: error.localizedDescription)))
+                    completion(.failure(error))
                 }
             }
         )
@@ -69,7 +69,7 @@ private extension WeatherRepository {
             case .success(let model):
                 completion(.success(model))
             case .failure(let error):
-                completion(.failure(error as? NetworkError ?? NetworkError.dataReceivingError(description: error.localizedDescription)))
+                completion(.failure(error))
             }
         }
     }

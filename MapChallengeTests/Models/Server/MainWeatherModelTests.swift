@@ -11,15 +11,7 @@ import XCTest
 
 final class MainWeatherModelTests: XCTestCase {
     func testModelParsing() {
-        let sampleJson =
-        """
-        {
-            "temp" : 20.0,
-            "humidity" : 5
-        }
-        """
-        
-        let data = sampleJson.data(using: .utf8)!
+        let data = MocksDictionariesFactory.mainWeatherModel.data(using: .utf8)!
         let decoder = JSONDecoder()
         let model = try! decoder.decode(MainWeatherModel.self, from: data)
         

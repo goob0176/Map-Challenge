@@ -18,7 +18,7 @@ struct NetworkService: DataService {
         self.requestConstructor = requestConstructor
     }
     
-    func handle<T: Decodable>(request: Requestable, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+    func handle<T: Decodable>(request: Requestable, responseType: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
         guard let request = requestConstructor.urlRequest(from: request) else {
             completion(.failure(NetworkError.invalidUrl))
             return
