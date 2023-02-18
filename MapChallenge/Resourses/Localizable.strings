@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  MapChallenge
+
+  Created by Andrey Khlopotin on 18.02.2023.
+  
+*/
+
+"INVALID_URL_ERROR_MSG" = "Seems like the url is wrong";
+"SERVER_ERROR_MSG" = "Seems like there is something wrong with the server";
