@@ -38,6 +38,7 @@
 		B748803529A1394E00FEB9BD /* UrlRequestConstructorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803429A1394E00FEB9BD /* UrlRequestConstructorTest.swift */; };
 		B748803829A13E2300FEB9BD /* WeatherCoordinationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803729A13E2300FEB9BD /* WeatherCoordinationsModel.swift */; };
 		B748803A29A13FF400FEB9BD /* WeatherCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */; };
+		B748803C29A1410100FEB9BD /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803B29A1410100FEB9BD /* NetworkErrorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		B748803429A1394E00FEB9BD /* UrlRequestConstructorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestConstructorTest.swift; sourceTree = "<group>"; };
 		B748803729A13E2300FEB9BD /* WeatherCoordinationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordinationsModel.swift; sourceTree = "<group>"; };
 		B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordinatesModel.swift; sourceTree = "<group>"; };
+		B748803B29A1410100FEB9BD /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 			children = (
 				B748802929A1233800FEB9BD /* Server */,
 				B748803629A1395F00FEB9BD /* URLRequestConstructor */,
+				B748803B29A1410100FEB9BD /* NetworkErrorTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				B748802D29A125A500FEB9BD /* WeatherRepositoryTests.swift in Sources */,
 				B748802729A1232000FEB9BD /* MainWeatherModelTests.swift in Sources */,
 				B748803129A129D100FEB9BD /* DataServiceMock.swift in Sources */,
+				B748803C29A1410100FEB9BD /* NetworkErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
