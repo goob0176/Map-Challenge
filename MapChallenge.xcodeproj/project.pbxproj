@@ -35,6 +35,7 @@
 		B748802D29A125A500FEB9BD /* WeatherRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748802C29A125A500FEB9BD /* WeatherRepositoryTests.swift */; };
 		B748803129A129D100FEB9BD /* DataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803029A129D100FEB9BD /* DataServiceMock.swift */; };
 		B748803329A1327300FEB9BD /* MocksDictionaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803229A1327300FEB9BD /* MocksDictionaries.swift */; };
+		B748803529A1394E00FEB9BD /* UrlRequestConstructorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803429A1394E00FEB9BD /* UrlRequestConstructorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		B748802C29A125A500FEB9BD /* WeatherRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepositoryTests.swift; sourceTree = "<group>"; };
 		B748803029A129D100FEB9BD /* DataServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceMock.swift; sourceTree = "<group>"; };
 		B748803229A1327300FEB9BD /* MocksDictionaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MocksDictionaries.swift; sourceTree = "<group>"; };
+		B748803429A1394E00FEB9BD /* UrlRequestConstructorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequestConstructorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				B748802929A1233800FEB9BD /* Server */,
+				B748803629A1395F00FEB9BD /* URLRequestConstructor */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,6 +353,14 @@
 				B748803229A1327300FEB9BD /* MocksDictionaries.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B748803629A1395F00FEB9BD /* URLRequestConstructor */ = {
+			isa = PBXGroup;
+			children = (
+				B748803429A1394E00FEB9BD /* UrlRequestConstructorTest.swift */,
+			);
+			path = URLRequestConstructor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B748803529A1394E00FEB9BD /* UrlRequestConstructorTest.swift in Sources */,
 				B748802B29A1247B00FEB9BD /* PlaceWeatherModelTests.swift in Sources */,
 				B748803329A1327300FEB9BD /* MocksDictionaries.swift in Sources */,
 				B748802529A122D400FEB9BD /* GeolocationModelTests.swift in Sources */,

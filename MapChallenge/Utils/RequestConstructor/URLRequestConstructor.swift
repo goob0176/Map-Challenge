@@ -41,7 +41,9 @@ private extension URLRequestConstructor {
         }
         
         var queryItems = [URLQueryItem]()
-        parameters.forEach { key, value in
+        parameters
+            .sorted { $0.0 < $1.0 }
+            .forEach { key, value in
             let queryItem = URLQueryItem(name: key, value: "\(value)")
             queryItems.append(queryItem)
         }
