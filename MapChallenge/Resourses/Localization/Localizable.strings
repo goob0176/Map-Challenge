@@ -8,3 +8,9 @@
 
 "INVALID_URL_ERROR_MSG" = "Seems like the url is wrong";
 "SERVER_ERROR_MSG" = "Seems like there is something wrong with the server";
+
+"SEARCH_BAR_PLACEHOLDER" = "Enter place title or Zip-Code";
+"GENERAL_ALERT_TITLE" = "Error!";
+"INVALID_SERVER_MODEL_ERROR" = "Server model is invalid!";
+
+"GENERAL_ALERT_BUTTON_TITLE" = "Ok";

@@ -10,6 +10,10 @@ import Foundation
 struct Localization {
     static let invalidUrlErrorMsg = "INVALID_URL_ERROR_MSG".localized
     static let serverErrorMsg = "SERVER_ERROR_MSG".localized
+    static let searchBarPlaceholder = "SEARCH_BAR_PLACEHOLDER".localized
+    static let generalAlertTitle = "GENERAL_ALERT_TITLE".localized
+    static let invalidServerModelError = "INVALID_SERVER_MODEL_ERROR".localized
+    static let generalAlertButtonTitle = "GENERAL_ALERT_BUTTON_TITLE".localized
 }
 
 private extension String {

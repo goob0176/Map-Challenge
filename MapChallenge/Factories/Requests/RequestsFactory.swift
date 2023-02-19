@@ -17,6 +17,8 @@ private struct Constants {
     static let timeoutInterval = 10.0
     static let limitParameter = 1
     
+    static let celciusMetricParam = "metric"
+    
     struct Paths {
         static let geocoding = "/geo/1.0/direct"
         static let weather = "/data/2.5/weather"
@@ -47,6 +49,7 @@ struct RequestsFactory {
             params: [
                 "lat": "\(latitude)",
                 "lon": "\(longitude)",
+                "units": Constants.celciusMetricParam,
                 "appId": Constants.appId
             ],
             timeoutInterval: Constants.timeoutInterval,

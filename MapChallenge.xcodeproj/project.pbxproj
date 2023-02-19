@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B7487FC429A10ECA00FEB9BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FC329A10ECA00FEB9BD /* AppDelegate.swift */; };
 		B7487FC629A10ECA00FEB9BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FC529A10ECA00FEB9BD /* SceneDelegate.swift */; };
-		B7487FC829A10ECA00FEB9BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FC729A10ECA00FEB9BD /* ViewController.swift */; };
+		B7487FC829A10ECA00FEB9BD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7487FC729A10ECA00FEB9BD /* MapViewController.swift */; };
 		B7487FCB29A10ECA00FEB9BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7487FC929A10ECA00FEB9BD /* Main.storyboard */; };
 		B7487FCD29A10ECC00FEB9BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7487FCC29A10ECC00FEB9BD /* Assets.xcassets */; };
 		B7487FD029A10ECC00FEB9BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7487FCE29A10ECC00FEB9BD /* LaunchScreen.storyboard */; };
@@ -39,6 +39,11 @@
 		B748803829A13E2300FEB9BD /* WeatherCoordinationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803729A13E2300FEB9BD /* WeatherCoordinationsModel.swift */; };
 		B748803A29A13FF400FEB9BD /* WeatherCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */; };
 		B748803C29A1410100FEB9BD /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803B29A1410100FEB9BD /* NetworkErrorTests.swift */; };
+		B748803E29A1424600FEB9BD /* MapScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748803D29A1424600FEB9BD /* MapScreenViewModel.swift */; };
+		B748804129A1427300FEB9BD /* MapScreenViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748804029A1427300FEB9BD /* MapScreenViewModelType.swift */; };
+		B748804529A24B7D00FEB9BD /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748804429A24B7D00FEB9BD /* MapCoordinator.swift */; };
+		B748804829A24BBB00FEB9BD /* MapCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748804729A24BBB00FEB9BD /* MapCoordinatorType.swift */; };
+		B748804A29A24CC000FEB9BD /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748804929A24CC000FEB9BD /* AlertPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +67,7 @@
 		B7487FC029A10ECA00FEB9BD /* MapChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7487FC329A10ECA00FEB9BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7487FC529A10ECA00FEB9BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7487FC729A10ECA00FEB9BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7487FC729A10ECA00FEB9BD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B7487FCA29A10ECA00FEB9BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7487FCC29A10ECC00FEB9BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7487FCF29A10ECC00FEB9BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,6 +100,11 @@
 		B748803729A13E2300FEB9BD /* WeatherCoordinationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordinationsModel.swift; sourceTree = "<group>"; };
 		B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordinatesModel.swift; sourceTree = "<group>"; };
 		B748803B29A1410100FEB9BD /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
+		B748803D29A1424600FEB9BD /* MapScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModel.swift; sourceTree = "<group>"; };
+		B748804029A1427300FEB9BD /* MapScreenViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModelType.swift; sourceTree = "<group>"; };
+		B748804429A24B7D00FEB9BD /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		B748804729A24BBB00FEB9BD /* MapCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinatorType.swift; sourceTree = "<group>"; };
+		B748804929A24CC000FEB9BD /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,17 +156,16 @@
 			isa = PBXGroup;
 			children = (
 				B7487FFD29A10F8B00FEB9BD /* Startup */,
+				B748803F29A1424C00FEB9BD /* ViewModels */,
 				B748800129A1100D00FEB9BD /* Services */,
 				B748801929A1164B00FEB9BD /* Repositories */,
 				B7487FFE29A10FE200FEB9BD /* UI */,
 				B7487FF529A10F2400FEB9BD /* Models */,
 				B748800F29A111FF00FEB9BD /* Utils */,
 				B748801529A115CD00FEB9BD /* Factories */,
-				B7487FC929A10ECA00FEB9BD /* Main.storyboard */,
-				B7487FCC29A10ECC00FEB9BD /* Assets.xcassets */,
-				B7487FCE29A10ECC00FEB9BD /* LaunchScreen.storyboard */,
 				B7487FD129A10ECC00FEB9BD /* Info.plist */,
 				B748800729A110A800FEB9BD /* Resourses */,
+				B748804629A24B8000FEB9BD /* Coordinators */,
 			);
 			path = MapChallenge;
 			sourceTree = "<group>";
@@ -226,7 +235,7 @@
 		B7487FFE29A10FE200FEB9BD /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B7487FC729A10ECA00FEB9BD /* ViewController.swift */,
+				B748804229A246CB00FEB9BD /* MapScreen */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -252,8 +261,9 @@
 		B748800729A110A800FEB9BD /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				B748800529A1109F00FEB9BD /* Localization.swift */,
-				B748800829A110D200FEB9BD /* Localizable.strings */,
+				B7487FCC29A10ECC00FEB9BD /* Assets.xcassets */,
+				B7487FCE29A10ECC00FEB9BD /* LaunchScreen.storyboard */,
+				B748804329A246E400FEB9BD /* Localization */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -270,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				B748801229A1128300FEB9BD /* RequestConstructor */,
+				B748804929A24CC000FEB9BD /* AlertPresenter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -370,6 +381,42 @@
 				B748803429A1394E00FEB9BD /* UrlRequestConstructorTest.swift */,
 			);
 			path = URLRequestConstructor;
+			sourceTree = "<group>";
+		};
+		B748803F29A1424C00FEB9BD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B748804029A1427300FEB9BD /* MapScreenViewModelType.swift */,
+				B748803D29A1424600FEB9BD /* MapScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B748804229A246CB00FEB9BD /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B7487FC929A10ECA00FEB9BD /* Main.storyboard */,
+				B7487FC729A10ECA00FEB9BD /* MapViewController.swift */,
+			);
+			path = MapScreen;
+			sourceTree = "<group>";
+		};
+		B748804329A246E400FEB9BD /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B748800529A1109F00FEB9BD /* Localization.swift */,
+				B748800829A110D200FEB9BD /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		B748804629A24B8000FEB9BD /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B748804729A24BBB00FEB9BD /* MapCoordinatorType.swift */,
+				B748804429A24B7D00FEB9BD /* MapCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,19 +553,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				B748803829A13E2300FEB9BD /* WeatherCoordinationsModel.swift in Sources */,
+				B748804829A24BBB00FEB9BD /* MapCoordinatorType.swift in Sources */,
 				B748801829A1164700FEB9BD /* WeatherRepository.swift in Sources */,
+				B748803E29A1424600FEB9BD /* MapScreenViewModel.swift in Sources */,
 				B748800E29A111F400FEB9BD /* RequestConstructor.swift in Sources */,
 				B748800B29A1110700FEB9BD /* NetworkService.swift in Sources */,
 				B748800429A1104400FEB9BD /* NetworkError.swift in Sources */,
 				B748801C29A116A600FEB9BD /* WeatherRepositoryType.swift in Sources */,
 				B7487FF929A10F5500FEB9BD /* Requestable.swift in Sources */,
 				B748801129A1127600FEB9BD /* URLRequestConstructor.swift in Sources */,
+				B748804529A24B7D00FEB9BD /* MapCoordinator.swift in Sources */,
 				B748800029A1100A00FEB9BD /* DataService.swift in Sources */,
 				B748801E29A1172F00FEB9BD /* PlaceWeatherModel.swift in Sources */,
 				B748802329A11E0D00FEB9BD /* MainWeatherModel.swift in Sources */,
 				B7487FF429A10F0E00FEB9BD /* GeocodingLocationModel.swift in Sources */,
-				B7487FC829A10ECA00FEB9BD /* ViewController.swift in Sources */,
+				B748804A29A24CC000FEB9BD /* AlertPresenter.swift in Sources */,
+				B7487FC829A10ECA00FEB9BD /* MapViewController.swift in Sources */,
 				B748800629A1109F00FEB9BD /* Localization.swift in Sources */,
+				B748804129A1427300FEB9BD /* MapScreenViewModelType.swift in Sources */,
 				B7487FC429A10ECA00FEB9BD /* AppDelegate.swift in Sources */,
 				B7487FFC29A10F7900FEB9BD /* NetworkRequest.swift in Sources */,
 				B748801429A115C900FEB9BD /* RequestsFactory.swift in Sources */,
