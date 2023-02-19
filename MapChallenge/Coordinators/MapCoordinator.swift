@@ -27,7 +27,7 @@ struct MapCoordinator: MapCoordinatorType {
             presentError(with: Localization.invalidServerModelError)
             return
         }
-        let annotation = MKPointAnnotation()
+        let annotation = BasePinAnnotation(weatherModel: model, reuseId: BasePinView.typeString)
         let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         annotation.coordinate = coordinate
         mapView.setCenter(coordinate, animated: true)

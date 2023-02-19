@@ -8,6 +8,8 @@
 import UIKit
 import MapKit
 
+// MARK: - MapViewController
+
 final class MapViewController: UIViewController {
     @IBOutlet
     private weak var searchBar: UISearchBar!
@@ -22,13 +24,20 @@ final class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
+        setupMapView()
     }
     
     private func setupSearchBar() {
         searchBar.placeholder = Localization.searchBarPlaceholder
         searchBar.delegate = self
     }
+    
+    private func setupMapView() {
+        mapView.delegate = self
+    }
 }
+
+// MARK: - UISearchBarDelegate
 
 extension MapViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -45,6 +54,26 @@ extension MapViewController: UISearchBarDelegate {
                 }
             }
         }
+    }
+}
+
+// MARK: - MKMapViewDelegate
+
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let baseAnnotation = annotation as? PinAnnotation else {
+            return nil
+        }
+        var annotationView: MKAnnotationView
+        if let view = mapView.dequeueReusableAnnotationView(withIdentifier: baseAnnotation.reuseId) {
+            annotationView = view
+        } else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: baseAnnotation.reuseId)
+            let pinView = UIView.fromNib(with: baseAnnotation.reuseId) as? PinView
+            pinView?.setup(with: baseAnnotation.weatherModel)
+            annotationView.addSubview(pinView as? UIView ?? UIView())
+        }
+        return annotationView
     }
 }
 

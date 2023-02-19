@@ -44,6 +44,12 @@
 		B748804529A24B7D00FEB9BD /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748804429A24B7D00FEB9BD /* MapCoordinator.swift */; };
 		B748804829A24BBB00FEB9BD /* MapCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748804729A24BBB00FEB9BD /* MapCoordinatorType.swift */; };
 		B748804A29A24CC000FEB9BD /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748804929A24CC000FEB9BD /* AlertPresenter.swift */; };
+		B748805529A254C600FEB9BD /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748805429A254C600FEB9BD /* UIView+Ex.swift */; };
+		B764B5E229A25A8E00B4D328 /* BasePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B5E029A25A8E00B4D328 /* BasePinView.swift */; };
+		B764B5E329A25A8E00B4D328 /* BasePinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B764B5E129A25A8E00B4D328 /* BasePinView.xib */; };
+		B764B5E529A25AA900B4D328 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B5E429A25AA900B4D328 /* PinView.swift */; };
+		B764B5E729A25D3C00B4D328 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B5E629A25D3C00B4D328 /* PinAnnotation.swift */; };
+		B764B5EB29A25DFF00B4D328 /* BasePinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B5EA29A25DFF00B4D328 /* BasePinAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +111,12 @@
 		B748804429A24B7D00FEB9BD /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		B748804729A24BBB00FEB9BD /* MapCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinatorType.swift; sourceTree = "<group>"; };
 		B748804929A24CC000FEB9BD /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		B748805429A254C600FEB9BD /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		B764B5E029A25A8E00B4D328 /* BasePinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePinView.swift; sourceTree = "<group>"; };
+		B764B5E129A25A8E00B4D328 /* BasePinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasePinView.xib; sourceTree = "<group>"; };
+		B764B5E429A25AA900B4D328 /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		B764B5E629A25D3C00B4D328 /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
+		B764B5EA29A25DFF00B4D328 /* BasePinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePinAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				B7487FF629A10F2C00FEB9BD /* Server */,
+				B764B5E829A25D4400B4D328 /* Map */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,7 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				B748801229A1128300FEB9BD /* RequestConstructor */,
-				B748804929A24CC000FEB9BD /* AlertPresenter.swift */,
+				B748805329A254A200FEB9BD /* AlertPresenter */,
+				B748805429A254C600FEB9BD /* UIView+Ex.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -395,8 +409,8 @@
 		B748804229A246CB00FEB9BD /* MapScreen */ = {
 			isa = PBXGroup;
 			children = (
-				B7487FC929A10ECA00FEB9BD /* Main.storyboard */,
-				B7487FC729A10ECA00FEB9BD /* MapViewController.swift */,
+				B764B5DE29A25A8E00B4D328 /* Views */,
+				B748804B29A2529300FEB9BD /* Screens */,
 			);
 			path = MapScreen;
 			sourceTree = "<group>";
@@ -417,6 +431,59 @@
 				B748804429A24B7D00FEB9BD /* MapCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B748804B29A2529300FEB9BD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B7487FC929A10ECA00FEB9BD /* Main.storyboard */,
+				B7487FC729A10ECA00FEB9BD /* MapViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B748805329A254A200FEB9BD /* AlertPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				B748804929A24CC000FEB9BD /* AlertPresenter.swift */,
+			);
+			path = AlertPresenter;
+			sourceTree = "<group>";
+		};
+		B764B5DE29A25A8E00B4D328 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B764B5E429A25AA900B4D328 /* PinView.swift */,
+				B764B5DF29A25A8E00B4D328 /* BasePinView */,
+			);
+			name = Views;
+			path = Screens/Views;
+			sourceTree = "<group>";
+		};
+		B764B5DF29A25A8E00B4D328 /* BasePinView */ = {
+			isa = PBXGroup;
+			children = (
+				B764B5E029A25A8E00B4D328 /* BasePinView.swift */,
+				B764B5E129A25A8E00B4D328 /* BasePinView.xib */,
+			);
+			path = BasePinView;
+			sourceTree = "<group>";
+		};
+		B764B5E829A25D4400B4D328 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				B764B5E929A25DEE00B4D328 /* Annotation */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		B764B5E929A25DEE00B4D328 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				B764B5E629A25D3C00B4D328 /* PinAnnotation.swift */,
+				B764B5EA29A25DFF00B4D328 /* BasePinAnnotation.swift */,
+			);
+			path = Annotation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +595,7 @@
 				B748800929A110D200FEB9BD /* Localizable.strings in Resources */,
 				B7487FCD29A10ECC00FEB9BD /* Assets.xcassets in Resources */,
 				B7487FCB29A10ECA00FEB9BD /* Main.storyboard in Resources */,
+				B764B5E329A25A8E00B4D328 /* BasePinView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +623,7 @@
 				B748803829A13E2300FEB9BD /* WeatherCoordinationsModel.swift in Sources */,
 				B748804829A24BBB00FEB9BD /* MapCoordinatorType.swift in Sources */,
 				B748801829A1164700FEB9BD /* WeatherRepository.swift in Sources */,
+				B764B5EB29A25DFF00B4D328 /* BasePinAnnotation.swift in Sources */,
 				B748803E29A1424600FEB9BD /* MapScreenViewModel.swift in Sources */,
 				B748800E29A111F400FEB9BD /* RequestConstructor.swift in Sources */,
 				B748800B29A1110700FEB9BD /* NetworkService.swift in Sources */,
@@ -568,10 +637,14 @@
 				B748802329A11E0D00FEB9BD /* MainWeatherModel.swift in Sources */,
 				B7487FF429A10F0E00FEB9BD /* GeocodingLocationModel.swift in Sources */,
 				B748804A29A24CC000FEB9BD /* AlertPresenter.swift in Sources */,
+				B764B5E729A25D3C00B4D328 /* PinAnnotation.swift in Sources */,
 				B7487FC829A10ECA00FEB9BD /* MapViewController.swift in Sources */,
 				B748800629A1109F00FEB9BD /* Localization.swift in Sources */,
+				B764B5E529A25AA900B4D328 /* PinView.swift in Sources */,
+				B748805529A254C600FEB9BD /* UIView+Ex.swift in Sources */,
 				B748804129A1427300FEB9BD /* MapScreenViewModelType.swift in Sources */,
 				B7487FC429A10ECA00FEB9BD /* AppDelegate.swift in Sources */,
+				B764B5E229A25A8E00B4D328 /* BasePinView.swift in Sources */,
 				B7487FFC29A10F7900FEB9BD /* NetworkRequest.swift in Sources */,
 				B748801429A115C900FEB9BD /* RequestsFactory.swift in Sources */,
 				B7487FC629A10ECA00FEB9BD /* SceneDelegate.swift in Sources */,
