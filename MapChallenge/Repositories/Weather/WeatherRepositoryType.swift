@@ -11,4 +11,5 @@ typealias WeatherResponse = (Result<PlaceWeatherModel, NetworkError>) -> Void
 
 protocol WeatherRepositoryType {
     func fetchWeather(for title: String, completion: @escaping WeatherResponse)
+    func fetchWeather(for lat: Double?, lon: Double?, completion: @escaping WeatherResponse)
 }

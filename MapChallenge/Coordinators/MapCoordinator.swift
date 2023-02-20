@@ -23,22 +23,39 @@ struct MapCoordinator: MapCoordinatorType {
     
     func goToCoordinates(receivedFrom model: PlaceWeatherModel, onItemTapped: @escaping ()->Void) {
         mapView.removeAnnotations(mapView.annotations)
-        guard let lat = model.coord?.lat,
-              let lon = model.coord?.lon else {
-            presentError(with: Localization.invalidServerModelError)
-            return
+        addAnnotation(from: model, annotationReuseId: BasePinView.typeString, onItemTapped: onItemTapped)
+    }
+    
+    func placeSideLocationsMarkers(on models: [PlaceWeatherModel]) {
+        models.forEach { model in
+            addAnnotation(from: model, annotationReuseId: BasePinView.typeString)
         }
-        let annotationViewModel = AnnotationViewModel(weatherViewModel: model, onItemTapped: onItemTapped)
-        let annotation = BasePinAnnotation(annotationViewModel: annotationViewModel, reuseId: BasePinView.typeString)
-        let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-        annotation.coordinate = coordinate
-        mapView.setCenter(coordinate, animated: true)
-        mapView.addAnnotation(annotation)
     }
     
     func presentError(with description: String?) {
         mapView.removeAnnotations(mapView.annotations)
         let alert = AlertPresenter.baseAlert(with: Localization.generalAlertTitle, message: description)
         sourceViewController.present(alert, animated: true)
+    }
+}
+
+private extension MapCoordinator {
+    func addAnnotation(
+        from model: PlaceWeatherModel,
+        annotationReuseId: String,
+        onItemTapped: (()->Void)? = nil
+    ) {
+        guard let lat = model.coord?.lat,
+              let lon = model.coord?.lon else {
+            presentError(with: Localization.invalidServerModelError)
+            return
+        }
+        
+        let annotationViewModel = AnnotationViewModel(weatherViewModel: model, onItemTapped: onItemTapped)
+        let annotation = BasePinAnnotation(annotationViewModel: annotationViewModel, reuseId: annotationReuseId)
+        let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        annotation.coordinate = coordinate
+        mapView.setCenter(coordinate, animated: true)
+        mapView.addAnnotation(annotation)
     }
 }

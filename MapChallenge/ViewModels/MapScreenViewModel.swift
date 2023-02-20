@@ -6,16 +6,22 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct MapScreenViewModel: MapScreenViewModelType {
     private let weatherRepository: WeatherRepositoryType
+    private let locationsCalculator: LocationCalculator
     private let coordinator: MapCoordinatorType
+    
+    private static let kSideLocationsOffsetMeters = 200000.0
     
     init(
         weatherRepository: WeatherRepositoryType = WeatherRepository(),
+        locationsCalculator: LocationCalculator = LocationCalculationService(),
         coordinator: MapCoordinatorType
     ) {
         self.weatherRepository = weatherRepository
+        self.locationsCalculator = locationsCalculator
         self.coordinator = coordinator
     }
     
@@ -34,5 +40,32 @@ struct MapScreenViewModel: MapScreenViewModelType {
         })
     }
     
-    private func handleItemTapped(coordinates: WeatherCoordinationsModel?) {}
+    private func handleItemTapped(coordinates: WeatherCoordinationsModel?) {
+        guard let lat = coordinates?.lat,
+              let lon = coordinates?.lon else {
+            return
+        }
+        let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        let locations = locationsCalculator.locations(from: coordinate, wideDistanse: Self.kSideLocationsOffsetMeters)
+        
+        let group = DispatchGroup()
+        var weatherModels = [PlaceWeatherModel]()
+        
+        locations.forEach { coordinate in
+            group.enter()
+            weatherRepository.fetchWeather(for: coordinate.latitude, lon: coordinate.longitude) { result in
+                switch result {
+                case .success(let model):
+                    weatherModels.append(model)
+                case .failure(let error):
+                    coordinator.presentError(with: error.localizedDescription)
+                }
+                group.leave()
+            }
+        }
+        
+        group.notify(queue: .main) {
+            coordinator.placeSideLocationsMarkers(on: weatherModels)
+        }
+    }
 }

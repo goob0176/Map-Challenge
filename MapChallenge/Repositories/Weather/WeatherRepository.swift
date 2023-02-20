@@ -26,7 +26,25 @@ struct WeatherRepository: WeatherRepositoryType {
         fetchPlace(title) { result in
             switch result {
             case .success(let model):
-                weather(for: model, completion: completion)
+                fetchWeather(for: model.lat, lon: model.lon, completion: completion)
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func fetchWeather(for lat: Double?, lon: Double?, completion: @escaping WeatherResponse) {
+        guard let lat = lat,
+              let lon = lon else {
+            return
+        }
+        dataService.handle(
+            request: RequestsFactory.placeRequest(latitude: lat, longitude: lon),
+            responseType: PlaceWeatherModel.self
+        ) { result in
+            switch result {
+            case .success(let model):
+                completion(.success(model))
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -54,23 +72,5 @@ private extension WeatherRepository {
                 }
             }
         )
-    }
-    
-    func weather(for model: GeocodingLocationModel, completion: @escaping WeatherResponse) {
-        guard let lat = model.lat,
-              let lon = model.lon else {
-            return
-        }
-        dataService.handle(
-            request: RequestsFactory.placeRequest(latitude: lat, longitude: lon),
-            responseType: PlaceWeatherModel.self
-        ) { result in
-            switch result {
-            case .success(let model):
-                completion(.success(model))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
     }
 }
