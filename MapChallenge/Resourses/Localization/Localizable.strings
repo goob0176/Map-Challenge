@@ -14,3 +14,6 @@
 "INVALID_SERVER_MODEL_ERROR" = "Server model is invalid!";
 
 "GENERAL_ALERT_BUTTON_TITLE" = "Ok";
+
+"HOTTEST_TEMP_MESSAGE" = "Hottest temp";
+"MOST_HUMIDITY_MESSAGE" = "Most humidity";

@@ -18,6 +18,7 @@ final class BasePinView: MKAnnotationView {
     private lazy var weatherLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
         label.minimumScaleFactor = Constants.labelMinimumScaleFactor
         label.textAlignment = .center
         return label
@@ -25,7 +26,7 @@ final class BasePinView: MKAnnotationView {
     
     private lazy var containerView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: Constants.containerViewSide, height: Constants.containerViewSide))
-        view.backgroundColor = .white
+        view.backgroundColor = .blue
         view.layer.cornerRadius = Constants.cornerRadius
         return view
     }()
@@ -66,10 +67,7 @@ final class BasePinView: MKAnnotationView {
 
 extension BasePinView: PinView {
     func setup(with model: AnnotationViewModel, and pinAnnotation: PinAnnotation) {
-        guard let temp = model.weatherViewModel.main?.temp else {
-            return
-        }
-        weatherLabel.text = "\(Int(temp))°"
+        weatherLabel.text = model.value
         onItemTapped = model.onItemTapped
         annotation = pinAnnotation as? MKAnnotation
     }

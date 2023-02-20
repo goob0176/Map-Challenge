@@ -10,6 +10,6 @@ import CoreLocation
 
 protocol MapCoordinatorType {
     func goToCoordinates(receivedFrom model: PlaceWeatherModel, onItemTapped: @escaping ()->Void)
-    func placeSideLocationsMarkers(on models: [PlaceWeatherModel])
+    func placeSideLocationsMarkers(on models: [MapWeatherModel])
     func presentError(with description: String?)
 }

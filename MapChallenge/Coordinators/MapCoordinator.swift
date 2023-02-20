@@ -23,12 +23,21 @@ struct MapCoordinator: MapCoordinatorType {
     
     func goToCoordinates(receivedFrom model: PlaceWeatherModel, onItemTapped: @escaping ()->Void) {
         mapView.removeAnnotations(mapView.annotations)
-        addAnnotation(from: model, annotationReuseId: BasePinView.typeString, onItemTapped: onItemTapped)
+        addAnnotation(
+            for: model.coord,
+            value: model.tempValue,
+            annotationReuseId: BasePinView.typeString,
+            onItemTapped: onItemTapped
+        )
     }
     
-    func placeSideLocationsMarkers(on models: [PlaceWeatherModel]) {
+    func placeSideLocationsMarkers(on models: [MapWeatherModel]) {
         models.forEach { model in
-            addAnnotation(from: model, annotationReuseId: BasePinView.typeString)
+            addAnnotation(
+                for: model.coordinates,
+                value: model.valueStirng,
+                annotationReuseId: SideLocationView.typeString
+            )
         }
     }
     
@@ -41,17 +50,18 @@ struct MapCoordinator: MapCoordinatorType {
 
 private extension MapCoordinator {
     func addAnnotation(
-        from model: PlaceWeatherModel,
+        for coordinatesModel: WeatherCoordinationsModel?,
+        value: String,
         annotationReuseId: String,
         onItemTapped: (()->Void)? = nil
     ) {
-        guard let lat = model.coord?.lat,
-              let lon = model.coord?.lon else {
+        guard let lat = coordinatesModel?.lat,
+              let lon = coordinatesModel?.lon else {
             presentError(with: Localization.invalidServerModelError)
             return
         }
         
-        let annotationViewModel = AnnotationViewModel(weatherViewModel: model, onItemTapped: onItemTapped)
+        let annotationViewModel = AnnotationViewModel(value: value, onItemTapped: onItemTapped)
         let annotation = BasePinAnnotation(annotationViewModel: annotationViewModel, reuseId: annotationReuseId)
         let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         annotation.coordinate = coordinate

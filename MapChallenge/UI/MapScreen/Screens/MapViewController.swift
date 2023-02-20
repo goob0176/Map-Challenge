@@ -34,6 +34,7 @@ final class MapViewController: UIViewController {
     private func setupMapView() {
         mapView.delegate = self
         mapView.register(BasePinView.self, forAnnotationViewWithReuseIdentifier: BasePinView.typeString)
+        mapView.register(SideLocationView.self, forAnnotationViewWithReuseIdentifier: SideLocationView.typeString)
     }
 }
 
@@ -44,6 +45,7 @@ extension MapViewController: UISearchBarDelegate {
         guard let text = searchBar.text else {
             return
         }
+        searchBar.resignFirstResponder()
         viewModel.getWeather(for: text)
     }
 }
@@ -68,7 +70,8 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        guard let annotation = views.first?.annotation else {
+        guard  let view = views.first as? BasePinView,
+               let annotation = view.annotation else {
             return
         }
         mapView.selectAnnotation(annotation, animated: false)

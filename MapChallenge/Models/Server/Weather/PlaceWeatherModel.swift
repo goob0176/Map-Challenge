@@ -8,4 +8,11 @@
 struct PlaceWeatherModel: Decodable {
     let main: MainWeatherModel?
     let coord: WeatherCoordinationsModel?
+    
+    var tempValue: String {
+        guard let temp = main?.temp else {
+            return "-"
+        }
+        return "\(Int(temp))°"
+    }
 }

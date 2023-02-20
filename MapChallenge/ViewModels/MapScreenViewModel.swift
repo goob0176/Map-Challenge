@@ -65,7 +65,17 @@ struct MapScreenViewModel: MapScreenViewModelType {
         }
         
         group.notify(queue: .main) {
-            coordinator.placeSideLocationsMarkers(on: weatherModels)
+            var mapModels = [
+                MapWeatherModel.model(
+                    sortedFrom: weatherModels, using: { $0.main?.temp ?? 0.0 > $1.main?.temp ?? 0.0 },
+                    highestValue: .hottestTemperature
+                ),
+                MapWeatherModel.model(
+                    sortedFrom: weatherModels, using: { $0.main?.humidity ?? 0 > $1.main?.humidity ?? 0 },
+                    highestValue: .mostHumidity
+                )
+            ]
+            coordinator.placeSideLocationsMarkers(on: mapModels)
         }
     }
 }

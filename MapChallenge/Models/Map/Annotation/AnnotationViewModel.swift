@@ -8,6 +8,6 @@
 import Foundation
 
 struct AnnotationViewModel {
-    let weatherViewModel: PlaceWeatherModel
+    let value: String
     let onItemTapped: (()->Void)?
 }

@@ -14,6 +14,8 @@ struct Localization {
     static let generalAlertTitle = "GENERAL_ALERT_TITLE".localized
     static let invalidServerModelError = "INVALID_SERVER_MODEL_ERROR".localized
     static let generalAlertButtonTitle = "GENERAL_ALERT_BUTTON_TITLE".localized
+    static let hottestTempMessage = "HOTTEST_TEMP_MESSAGE".localized
+    static let mostHumidityMessage = "MOST_HUMIDITY_MESSAGE".localized
 }
 
 private extension String {
