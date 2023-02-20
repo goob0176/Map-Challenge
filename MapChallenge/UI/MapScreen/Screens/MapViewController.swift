@@ -16,9 +16,8 @@ final class MapViewController: UIViewController {
     @IBOutlet private
     weak var mapView: MKMapView!
     
-    private let viewModel: MapScreenViewModelType = MapScreenViewModel()
-    private var coordinator: MapCoordinatorType {
-        MapCoordinator(sourceViewController: self, mapView: mapView)
+    private var viewModel: MapScreenViewModelType {
+        MapScreenViewModel(coordinator: MapCoordinator(sourceViewController: self, mapView: mapView))
     }
     
     override func viewDidLoad() {
@@ -34,6 +33,7 @@ final class MapViewController: UIViewController {
     
     private func setupMapView() {
         mapView.delegate = self
+        mapView.register(BasePinView.self, forAnnotationViewWithReuseIdentifier: BasePinView.typeString)
     }
 }
 
@@ -44,16 +44,7 @@ extension MapViewController: UISearchBarDelegate {
         guard let text = searchBar.text else {
             return
         }
-        viewModel.getWeather(for: text) { result in
-            DispatchQueue.main.async { [weak self] in
-                switch result {
-                case .success(let model):
-                    self?.coordinator.goToCoordinates(receivedFrom: model)
-                case .failure(let error):
-                    self?.coordinator.presentError(with: error.localizedDescription)
-                }
-            }
-        }
+        viewModel.getWeather(for: text)
     }
 }
 
@@ -69,11 +60,18 @@ extension MapViewController: MKMapViewDelegate {
             annotationView = view
         } else {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: baseAnnotation.reuseId)
-            let pinView = UIView.fromNib(with: baseAnnotation.reuseId) as? PinView
-            pinView?.setup(with: baseAnnotation.weatherModel)
-            annotationView.addSubview(pinView as? UIView ?? UIView())
         }
+        let pinView = annotationView as? PinView
+        pinView?.setup(with: baseAnnotation.annotationViewModel, and: baseAnnotation)
+        
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        guard let annotation = views.first?.annotation else {
+            return
+        }
+        mapView.selectAnnotation(annotation, animated: false)
     }
 }
 

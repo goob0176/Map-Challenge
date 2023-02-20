@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PinView: AnyObject {
-    func setup(with model: PlaceWeatherModel)
+    func setup(with model: AnnotationViewModel, and pinAnnotation: PinAnnotation)
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 protocol PinAnnotation: AnyObject {
-    var weatherModel: PlaceWeatherModel { get }
+    var annotationViewModel: AnnotationViewModel { get }
     var reuseId: String { get }
 }

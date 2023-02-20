@@ -21,13 +21,15 @@ struct MapCoordinator: MapCoordinatorType {
         self.mapView = mapView
     }
     
-    func goToCoordinates(receivedFrom model: PlaceWeatherModel) {
+    func goToCoordinates(receivedFrom model: PlaceWeatherModel, onItemTapped: @escaping ()->Void) {
+        mapView.removeAnnotations(mapView.annotations)
         guard let lat = model.coord?.lat,
               let lon = model.coord?.lon else {
             presentError(with: Localization.invalidServerModelError)
             return
         }
-        let annotation = BasePinAnnotation(weatherModel: model, reuseId: BasePinView.typeString)
+        let annotationViewModel = AnnotationViewModel(weatherViewModel: model, onItemTapped: onItemTapped)
+        let annotation = BasePinAnnotation(annotationViewModel: annotationViewModel, reuseId: BasePinView.typeString)
         let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         annotation.coordinate = coordinate
         mapView.setCenter(coordinate, animated: true)

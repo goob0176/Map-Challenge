@@ -8,6 +8,6 @@
 import Foundation
 
 protocol MapCoordinatorType {
-    func goToCoordinates(receivedFrom model: PlaceWeatherModel)
+    func goToCoordinates(receivedFrom model: PlaceWeatherModel, onItemTapped: @escaping ()->Void)
     func presentError(with description: String?)
 }

@@ -9,11 +9,11 @@ import Foundation
 import MapKit
 
 final class BasePinAnnotation: MKPointAnnotation, PinAnnotation {
-    let weatherModel: PlaceWeatherModel
+    let annotationViewModel: AnnotationViewModel
     let reuseId: String
     
-    init(weatherModel: PlaceWeatherModel, reuseId: String) {
-        self.weatherModel = weatherModel
+    init(annotationViewModel: AnnotationViewModel, reuseId: String) {
+        self.annotationViewModel = annotationViewModel
         self.reuseId = reuseId
     }
 }

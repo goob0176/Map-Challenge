@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MapScreenViewModelType {
-    func getWeather(for place: String, completion: @escaping WeatherResponse)
+    func getWeather(for place: String)
 }

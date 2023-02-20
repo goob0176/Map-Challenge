@@ -46,10 +46,10 @@
 		B748804A29A24CC000FEB9BD /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748804929A24CC000FEB9BD /* AlertPresenter.swift */; };
 		B748805529A254C600FEB9BD /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748805429A254C600FEB9BD /* UIView+Ex.swift */; };
 		B764B5E229A25A8E00B4D328 /* BasePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B5E029A25A8E00B4D328 /* BasePinView.swift */; };
-		B764B5E329A25A8E00B4D328 /* BasePinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B764B5E129A25A8E00B4D328 /* BasePinView.xib */; };
 		B764B5E529A25AA900B4D328 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B5E429A25AA900B4D328 /* PinView.swift */; };
 		B764B5E729A25D3C00B4D328 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B5E629A25D3C00B4D328 /* PinAnnotation.swift */; };
 		B764B5EB29A25DFF00B4D328 /* BasePinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B764B5EA29A25DFF00B4D328 /* BasePinAnnotation.swift */; };
+		B7F171A529A28C9F00853A54 /* AnnotationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171A429A28C9F00853A54 /* AnnotationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,10 +113,10 @@
 		B748804929A24CC000FEB9BD /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		B748805429A254C600FEB9BD /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		B764B5E029A25A8E00B4D328 /* BasePinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePinView.swift; sourceTree = "<group>"; };
-		B764B5E129A25A8E00B4D328 /* BasePinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasePinView.xib; sourceTree = "<group>"; };
 		B764B5E429A25AA900B4D328 /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		B764B5E629A25D3C00B4D328 /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		B764B5EA29A25DFF00B4D328 /* BasePinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePinAnnotation.swift; sourceTree = "<group>"; };
+		B7F171A429A28C9F00853A54 /* AnnotationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +167,7 @@
 		B7487FC229A10ECA00FEB9BD /* MapChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				B7487FD129A10ECC00FEB9BD /* Info.plist */,
 				B7487FFD29A10F8B00FEB9BD /* Startup */,
 				B748803F29A1424C00FEB9BD /* ViewModels */,
 				B748800129A1100D00FEB9BD /* Services */,
@@ -175,7 +176,6 @@
 				B7487FF529A10F2400FEB9BD /* Models */,
 				B748800F29A111FF00FEB9BD /* Utils */,
 				B748801529A115CD00FEB9BD /* Factories */,
-				B7487FD129A10ECC00FEB9BD /* Info.plist */,
 				B748800729A110A800FEB9BD /* Resourses */,
 				B748804629A24B8000FEB9BD /* Coordinators */,
 			);
@@ -464,7 +464,6 @@
 			isa = PBXGroup;
 			children = (
 				B764B5E029A25A8E00B4D328 /* BasePinView.swift */,
-				B764B5E129A25A8E00B4D328 /* BasePinView.xib */,
 			);
 			path = BasePinView;
 			sourceTree = "<group>";
@@ -480,6 +479,7 @@
 		B764B5E929A25DEE00B4D328 /* Annotation */ = {
 			isa = PBXGroup;
 			children = (
+				B7F171A429A28C9F00853A54 /* AnnotationViewModel.swift */,
 				B764B5E629A25D3C00B4D328 /* PinAnnotation.swift */,
 				B764B5EA29A25DFF00B4D328 /* BasePinAnnotation.swift */,
 			);
@@ -595,7 +595,6 @@
 				B748800929A110D200FEB9BD /* Localizable.strings in Resources */,
 				B7487FCD29A10ECC00FEB9BD /* Assets.xcassets in Resources */,
 				B7487FCB29A10ECA00FEB9BD /* Main.storyboard in Resources */,
-				B764B5E329A25A8E00B4D328 /* BasePinView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +631,7 @@
 				B7487FF929A10F5500FEB9BD /* Requestable.swift in Sources */,
 				B748801129A1127600FEB9BD /* URLRequestConstructor.swift in Sources */,
 				B748804529A24B7D00FEB9BD /* MapCoordinator.swift in Sources */,
+				B7F171A529A28C9F00853A54 /* AnnotationViewModel.swift in Sources */,
 				B748800029A1100A00FEB9BD /* DataService.swift in Sources */,
 				B748801E29A1172F00FEB9BD /* PlaceWeatherModel.swift in Sources */,
 				B748802329A11E0D00FEB9BD /* MainWeatherModel.swift in Sources */,
