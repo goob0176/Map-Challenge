@@ -27,7 +27,7 @@ struct MapCoordinator: MapCoordinatorType {
         mapView.removeAnnotations(mapView.annotations)
         addAnnotation(
             for: model.coord,
-            value: model.tempValue,
+            value: model.infoValue,
             annotationReuseId: BasePinView.typeString,
             shouldCenterTheScreenAroundCoordinate: true,
             onItemTapped: onItemTapped
@@ -38,8 +38,8 @@ struct MapCoordinator: MapCoordinatorType {
         models.forEach { model in
             addAnnotation(
                 for: model.coord,
-                value: model.tempValue,
-                annotationReuseId: SideLocationView.typeString
+                value: model.infoValue,
+                annotationReuseId: BasePinView.typeString
             )
         }
     }

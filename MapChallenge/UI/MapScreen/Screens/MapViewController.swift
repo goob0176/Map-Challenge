@@ -36,7 +36,6 @@ final class MapViewController: UIViewController {
     private func setupMapView() {
         mapView.delegate = self
         mapView.register(BasePinView.self, forAnnotationViewWithReuseIdentifier: BasePinView.typeString)
-        mapView.register(SideLocationView.self, forAnnotationViewWithReuseIdentifier: SideLocationView.typeString)
     }
     
     @IBAction
@@ -77,7 +76,8 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        guard  let view = views.first as? BasePinView,
+        guard views.count == 1,
+               let view = views.first as? BasePinView,
                let annotation = view.annotation else {
             return
         }

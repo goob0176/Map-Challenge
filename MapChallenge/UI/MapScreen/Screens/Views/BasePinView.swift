@@ -11,22 +11,23 @@ import MapKit
 private struct Constants {
     static let cornerRadius = 12.0
     static let labelMinimumScaleFactor = 0.7
-    static let containerViewSide = 50.0
+    static let sideOffset = 16.0
+    static let containerViewFrame = CGRect(x: 0, y: 0, width: 200.0, height: 100.0)
 }
 
 final class BasePinView: MKAnnotationView {
     private lazy var weatherLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
         label.minimumScaleFactor = Constants.labelMinimumScaleFactor
-        label.textAlignment = .center
+        label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
     
     private lazy var containerView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: Constants.containerViewSide, height: Constants.containerViewSide))
-        view.backgroundColor = .blue
+        let view = UIView(frame: Constants.containerViewFrame)
+        view.backgroundColor = .white
         view.layer.cornerRadius = Constants.cornerRadius
         return view
     }()
@@ -58,8 +59,8 @@ final class BasePinView: MKAnnotationView {
         NSLayoutConstraint.activate([
             weatherLabel.topAnchor.constraint(equalTo: containerView.topAnchor),
             weatherLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-            weatherLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            weatherLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            weatherLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: Constants.sideOffset),
+            weatherLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -Constants.sideOffset)
         ])
     }
 

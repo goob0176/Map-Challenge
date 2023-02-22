@@ -21,20 +21,14 @@ extension HighestValue {
         }
         switch self {
         case .hottestTemperature:
-            return formString(Localization.hottestTempMessage, value: model.main?.temp)
+            return DescriptionConstructor.formString(Localization.hottestTempMessage, value: model.main?.temp)
         case .mostHumidity:
-            return formString(Localization.mostHumidityMessage, value: model.main?.humidity)
+            return DescriptionConstructor.formString(Localization.mostHumidityMessage, value: model.main?.humidity)
         case .mostWind:
-            return formString(Localization.mostWindMessage, value: model.wind?.speed)
+            return DescriptionConstructor.formString(Localization.mostWindMessage, value: model.wind?.speed)
         case .mostRain:
-            return formString(Localization.mostRainMessage, value: model.rain?.rainPerHour)
+            return DescriptionConstructor.formString(Localization.mostRainMessage, value: model.rain?.rainPerHour)
         }
     }
-    
-    private func formString<T: Equatable>(_ prefix: String, value: T?) -> String {
-        guard let value = value else {
-            return "\(prefix): -"
-        }
-        return "\(prefix): \(value)"
-    }
+
 }

@@ -19,6 +19,10 @@ struct Localization {
     static let areaDetailsAlertTitle = "AREA_DETAILS_ALERT_TITLE".localized
     static let mostWindMessage = "MOST_WIND_MESSAGE".localized
     static let mostRainMessage = "MOST_RAIN_MESSAGE".localized
+    static let tempMessage = "TEMP_MESSAGE".localized
+    static let windMessage = "WIND_MESSAGE".localized
+    static let rainMessage = "RAIN_MESSAGE".localized
+    static let humidityMessage = "HUMIDITY_MESSAGE".localized
 }
 
 private extension String {
