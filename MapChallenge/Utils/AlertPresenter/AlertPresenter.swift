@@ -10,7 +10,7 @@ import UIKit
 
 struct AlertPresenter {
     static func baseAlert(with title: String?, message: String?) -> UIAlertController {
-        let alertController = UIAlertController(title: title, message: title, preferredStyle: .alert)
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: Localization.generalAlertButtonTitle, style: .cancel))
         
         return alertController

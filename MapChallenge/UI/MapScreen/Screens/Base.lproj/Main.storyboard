@@ -17,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kaj-KD-RBt">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kaj-KD-RBt">
                                 <rect key="frame" x="0.0" y="134" width="393" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="AbV-iF-h1A">
@@ -32,13 +33,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Kaj-KD-RBt" firstAttribute="top" secondItem="AbV-iF-h1A" secondAttribute="bottom" id="05Y-cI-n4C"/>
                             <constraint firstItem="AbV-iF-h1A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5SB-wo-g5I"/>
-                            <constraint firstItem="Kaj-KD-RBt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GpU-vk-oKz"/>
                             <constraint firstItem="AbV-iF-h1A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MWX-TP-CJi"/>
-                            <constraint firstItem="Kaj-KD-RBt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="X31-Ah-SfT"/>
                             <constraint firstItem="AbV-iF-h1A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="nKF-Fs-jiA"/>
-                            <constraint firstAttribute="bottom" secondItem="Kaj-KD-RBt" secondAttribute="bottom" id="vGd-ds-J5z"/>
                         </constraints>
                     </view>
                     <connections>

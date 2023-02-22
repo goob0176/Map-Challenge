@@ -13,6 +13,8 @@ struct MapCoordinator: MapCoordinatorType {
     private let sourceViewController: UIViewController
     private let mapView: MKMapView
     
+    private static let kLineBreakSeparator = "\n"
+    
     init(
         sourceViewController: UIViewController,
         mapView: MKMapView
@@ -27,15 +29,16 @@ struct MapCoordinator: MapCoordinatorType {
             for: model.coord,
             value: model.tempValue,
             annotationReuseId: BasePinView.typeString,
+            shouldCenterTheScreenAroundCoordinate: true,
             onItemTapped: onItemTapped
         )
     }
     
-    func placeSideLocationsMarkers(on models: [MapWeatherModel]) {
+    func placeSideLocationsMarkers(on models: [PlaceWeatherModel]) {
         models.forEach { model in
             addAnnotation(
-                for: model.coordinates,
-                value: model.valueStirng,
+                for: model.coord,
+                value: model.tempValue,
                 annotationReuseId: SideLocationView.typeString
             )
         }
@@ -46,6 +49,15 @@ struct MapCoordinator: MapCoordinatorType {
         let alert = AlertPresenter.baseAlert(with: Localization.generalAlertTitle, message: description)
         sourceViewController.present(alert, animated: true)
     }
+    
+    func presentAreaDetailsAlert(with models: [AreaDetailMode]) {
+        let descriptionString = models
+            .map { $0.valueStirng }
+            .joined(separator: Self.kLineBreakSeparator)
+        
+        let alert = AlertPresenter.baseAlert(with: Localization.areaDetailsAlertTitle, message: descriptionString)
+        sourceViewController.present(alert, animated: true)
+    }
 }
 
 private extension MapCoordinator {
@@ -53,6 +65,7 @@ private extension MapCoordinator {
         for coordinatesModel: WeatherCoordinationsModel?,
         value: String,
         annotationReuseId: String,
+        shouldCenterTheScreenAroundCoordinate: Bool = false,
         onItemTapped: (()->Void)? = nil
     ) {
         guard let lat = coordinatesModel?.lat,
@@ -65,7 +78,10 @@ private extension MapCoordinator {
         let annotation = BasePinAnnotation(annotationViewModel: annotationViewModel, reuseId: annotationReuseId)
         let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         annotation.coordinate = coordinate
-        mapView.setCenter(coordinate, animated: true)
         mapView.addAnnotation(annotation)
+        
+        if shouldCenterTheScreenAroundCoordinate {
+            mapView.setCenter(coordinate, animated: true)
+        }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 typealias WeatherSortingModel = ((PlaceWeatherModel, PlaceWeatherModel)->Bool)
 
-struct MapWeatherModel {
+struct AreaDetailMode {
     let coordinates: WeatherCoordinationsModel?
     let valueStirng: String
     
@@ -17,8 +17,8 @@ struct MapWeatherModel {
         sortedFrom array: [PlaceWeatherModel],
         using closure: WeatherSortingModel,
         highestValue: HighestValue
-    ) -> MapWeatherModel {
+    ) -> AreaDetailMode {
         let firstModel = array.sorted(by: closure).first
-        return MapWeatherModel(coordinates: firstModel?.coord, valueStirng: highestValue.value(from: firstModel))
+        return AreaDetailMode(coordinates: firstModel?.coord, valueStirng: highestValue.value(from: firstModel))
     }
 }

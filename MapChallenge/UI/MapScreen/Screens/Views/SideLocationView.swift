@@ -11,7 +11,8 @@ import MapKit
 private struct Constants {
     static let cornerRadius = 12.0
     static let labelMinimumScaleFactor = 0.5
-    static let containerViewFrame = CGRect(x: 0, y: 0, width: 200.0, height: 50.0)
+    static let fontSize = 16.0
+    static let containerViewFrame = CGRect(x: 0, y: 0, width: 50.0, height: 50.0)
 }
 
 class SideLocationView: MKAnnotationView {
@@ -19,6 +20,7 @@ class SideLocationView: MKAnnotationView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.minimumScaleFactor = Constants.labelMinimumScaleFactor
+        label.font = .boldSystemFont(ofSize: Constants.fontSize)
         label.textAlignment = .center
         return label
     }()

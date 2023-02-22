@@ -16,6 +16,7 @@ struct Localization {
     static let generalAlertButtonTitle = "GENERAL_ALERT_BUTTON_TITLE".localized
     static let hottestTempMessage = "HOTTEST_TEMP_MESSAGE".localized
     static let mostHumidityMessage = "MOST_HUMIDITY_MESSAGE".localized
+    static let areaDetailsAlertTitle = "AREA_DETAILS_ALERT_TITLE".localized
 }
 
 private extension String {
