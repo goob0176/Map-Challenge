@@ -61,6 +61,7 @@
 		B7F171BD29A6582600853A54 /* DescriptionConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171BC29A6582600853A54 /* DescriptionConstructor.swift */; };
 		B7F171C229A6682F00853A54 /* SideLocatiionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171C129A6682F00853A54 /* SideLocatiionModel.swift */; };
 		B7F171C429A668A500853A54 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171C329A668A500853A54 /* Direction.swift */; };
+		B7F171C829A6746400853A54 /* HighestValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171C729A6746400853A54 /* HighestValueTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		B7F171BC29A6582600853A54 /* DescriptionConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionConstructor.swift; sourceTree = "<group>"; };
 		B7F171C129A6682F00853A54 /* SideLocatiionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideLocatiionModel.swift; sourceTree = "<group>"; };
 		B7F171C329A668A500853A54 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		B7F171C729A6746400853A54 /* HighestValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighestValueTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,7 +317,7 @@
 		B748800F29A111FF00FEB9BD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B7F171BE29A6582C00853A54 /* New Group */,
+				B7F171BE29A6582C00853A54 /* DescriptionConstructor */,
 				B748801229A1128300FEB9BD /* RequestConstructor */,
 				B748805329A254A200FEB9BD /* AlertPresenter */,
 				B748805429A254C600FEB9BD /* UIView+Ex.swift */,
@@ -380,9 +382,10 @@
 		B748802829A1232F00FEB9BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B7F171C929A6747400853A54 /* HighestValue */,
 				B748802929A1233800FEB9BD /* Server */,
 				B748803629A1395F00FEB9BD /* URLRequestConstructor */,
-				B748803B29A1410100FEB9BD /* NetworkErrorTests.swift */,
+				B7F171C629A6745100853A54 /* Errors */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -542,12 +545,12 @@
 			path = Weather;
 			sourceTree = "<group>";
 		};
-		B7F171BE29A6582C00853A54 /* New Group */ = {
+		B7F171BE29A6582C00853A54 /* DescriptionConstructor */ = {
 			isa = PBXGroup;
 			children = (
 				B7F171BC29A6582600853A54 /* DescriptionConstructor.swift */,
 			);
-			path = "New Group";
+			path = DescriptionConstructor;
 			sourceTree = "<group>";
 		};
 		B7F171C529A668C700853A54 /* SideLocations */ = {
@@ -557,6 +560,22 @@
 				B7F171C129A6682F00853A54 /* SideLocatiionModel.swift */,
 			);
 			path = SideLocations;
+			sourceTree = "<group>";
+		};
+		B7F171C629A6745100853A54 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B748803B29A1410100FEB9BD /* NetworkErrorTests.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		B7F171C929A6747400853A54 /* HighestValue */ = {
+			isa = PBXGroup;
+			children = (
+				B7F171C729A6746400853A54 /* HighestValueTests.swift */,
+			);
+			path = HighestValue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -747,6 +766,7 @@
 				B748802D29A125A500FEB9BD /* WeatherRepositoryTests.swift in Sources */,
 				B748802729A1232000FEB9BD /* MainWeatherModelTests.swift in Sources */,
 				B748803129A129D100FEB9BD /* DataServiceMock.swift in Sources */,
+				B7F171C829A6746400853A54 /* HighestValueTests.swift in Sources */,
 				B748803C29A1410100FEB9BD /* NetworkErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
