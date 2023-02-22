@@ -15,8 +15,6 @@ final class MapViewController: UIViewController {
     private weak var searchBar: UISearchBar!
     @IBOutlet private
     weak var mapView: MKMapView!
-    @IBOutlet
-    private weak var statisticsButton: UIBarButtonItem!
     
     private var viewModel: MapScreenViewModelType {
         MapScreenViewModel(coordinator: MapCoordinator(sourceViewController: self, mapView: mapView))
@@ -36,11 +34,6 @@ final class MapViewController: UIViewController {
     private func setupMapView() {
         mapView.delegate = self
         mapView.register(BasePinView.self, forAnnotationViewWithReuseIdentifier: BasePinView.typeString)
-    }
-    
-    @IBAction
-    private func showStatistics(_ sender: UIBarButtonItem) {
-        
     }
 }
 
