@@ -11,6 +11,7 @@ enum HighestValue: CaseIterable {
     case hottestTemperature
     case mostHumidity
     case mostWind
+    case mostRain
 }
 
 extension HighestValue {
@@ -25,6 +26,8 @@ extension HighestValue {
             return formString(Localization.mostHumidityMessage, value: model.main?.humidity)
         case .mostWind:
             return formString(Localization.mostWindMessage, value: model.wind?.speed)
+        case .mostRain:
+            return formString(Localization.mostRainMessage, value: model.rain?.rainPerHour)
         }
     }
     

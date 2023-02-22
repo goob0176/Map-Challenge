@@ -9,6 +9,7 @@ struct PlaceWeatherModel: Decodable {
     let main: MainWeatherModel?
     let coord: WeatherCoordinationsModel?
     let wind: WindModel?
+    let rain: RainModel?
     
     var tempValue: String {
         guard let temp = main?.temp else {
@@ -22,5 +23,12 @@ struct PlaceWeatherModel: Decodable {
             return  "\(Localization.mostWindMessage): -"
         }
         return "\(Localization.mostWindMessage): \(speed)"
+    }
+    
+    var rainingValue: String {
+        guard let rainPerHour = rain?.rainPerHour else {
+           return "Rain per hour: -"
+        }
+        return "Rain per hour: \(rainPerHour)"
     }
 }

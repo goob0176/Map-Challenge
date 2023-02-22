@@ -8,6 +8,13 @@
 import Foundation
 
 struct MocksDictionariesFactory {
+    static let rainModel =
+    """
+    {
+        "1h": 3.51
+    }
+    """
+    
     static let windModel =
     """
     {
@@ -53,10 +60,13 @@ struct MocksDictionariesFactory {
       "main" : {
          "temp" : 20.0,
          "humidity" : 5
-        },
+    },
       "wind": {
         "speed": 0.62,
-        },
+    },
+      "rain": {
+        "1h": 3.51
+    }
     }
     """
     

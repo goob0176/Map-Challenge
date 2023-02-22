@@ -18,6 +18,7 @@ final class PlaceWeatherModelTests: XCTestCase {
         XCTAssertNotNil(model.main)
         XCTAssertNotNil(model.coord)
         XCTAssertNotNil(model.wind?.speed)
+        XCTAssertNotNil(model.rain?.rainPerHour)
         
         XCTAssertEqual(model.main?.temp, 20.0)
         XCTAssertEqual(model.main?.humidity, 5)
@@ -25,5 +26,6 @@ final class PlaceWeatherModelTests: XCTestCase {
         XCTAssertEqual(model.coord?.lat, 44.34)
         XCTAssertEqual(model.coord?.lon, 10.99)
         XCTAssertEqual(model.wind?.speed, 0.62)
+        XCTAssertEqual(model.rain?.rainPerHour, 3.51)
     }
 }

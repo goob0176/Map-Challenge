@@ -57,6 +57,8 @@
 		B7F171B129A404E900853A54 /* MapWeatherHighestValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B029A404E900853A54 /* MapWeatherHighestValue.swift */; };
 		B7F171B329A40E2600853A54 /* WindModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B229A40E2600853A54 /* WindModel.swift */; };
 		B7F171B529A40E7B00853A54 /* WindModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B429A40E7B00853A54 /* WindModelTests.swift */; };
+		B7F171B729A640BB00853A54 /* RainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B629A640BB00853A54 /* RainModel.swift */; };
+		B7F171B929A6438B00853A54 /* RainModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B829A6438B00853A54 /* RainModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		B7F171B029A404E900853A54 /* MapWeatherHighestValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWeatherHighestValue.swift; sourceTree = "<group>"; };
 		B7F171B229A40E2600853A54 /* WindModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindModel.swift; sourceTree = "<group>"; };
 		B7F171B429A40E7B00853A54 /* WindModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindModelTests.swift; sourceTree = "<group>"; };
+		B7F171B629A640BB00853A54 /* RainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainModel.swift; sourceTree = "<group>"; };
+		B7F171B829A6438B00853A54 /* RainModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +367,7 @@
 				B748802229A11E0D00FEB9BD /* MainWeatherModel.swift */,
 				B748803729A13E2300FEB9BD /* WeatherCoordinationsModel.swift */,
 				B7F171B229A40E2600853A54 /* WindModel.swift */,
+				B7F171B629A640BB00853A54 /* RainModel.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -380,11 +385,8 @@
 		B748802929A1233800FEB9BD /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				B748802429A122D400FEB9BD /* GeolocationModelTests.swift */,
-				B748802629A1232000FEB9BD /* MainWeatherModelTests.swift */,
-				B748802A29A1247B00FEB9BD /* PlaceWeatherModelTests.swift */,
-				B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */,
-				B7F171B429A40E7B00853A54 /* WindModelTests.swift */,
+				B7F171BA29A644E300853A54 /* Geolocation */,
+				B7F171BB29A644EC00853A54 /* Weather */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -513,6 +515,26 @@
 				B7F171AD29A3FB8500853A54 /* AreaDetailMode.swift */,
 			);
 			path = MapWeather;
+			sourceTree = "<group>";
+		};
+		B7F171BA29A644E300853A54 /* Geolocation */ = {
+			isa = PBXGroup;
+			children = (
+				B748802429A122D400FEB9BD /* GeolocationModelTests.swift */,
+			);
+			path = Geolocation;
+			sourceTree = "<group>";
+		};
+		B7F171BB29A644EC00853A54 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				B748802A29A1247B00FEB9BD /* PlaceWeatherModelTests.swift */,
+				B748802629A1232000FEB9BD /* MainWeatherModelTests.swift */,
+				B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */,
+				B7F171B429A40E7B00853A54 /* WindModelTests.swift */,
+				B7F171B829A6438B00853A54 /* RainModelTests.swift */,
+			);
+			path = Weather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -669,6 +691,7 @@
 				B748801E29A1172F00FEB9BD /* PlaceWeatherModel.swift in Sources */,
 				B748802329A11E0D00FEB9BD /* MainWeatherModel.swift in Sources */,
 				B7F171A729A3C5CE00853A54 /* LocationCalculationService.swift in Sources */,
+				B7F171B729A640BB00853A54 /* RainModel.swift in Sources */,
 				B7487FF429A10F0E00FEB9BD /* GeocodingLocationModel.swift in Sources */,
 				B748804A29A24CC000FEB9BD /* AlertPresenter.swift in Sources */,
 				B7F171AE29A3FB8500853A54 /* AreaDetailMode.swift in Sources */,
@@ -695,6 +718,7 @@
 				B748803329A1327300FEB9BD /* MocksDictionaries.swift in Sources */,
 				B748802529A122D400FEB9BD /* GeolocationModelTests.swift in Sources */,
 				B748803A29A13FF400FEB9BD /* WeatherCoordinatesModel.swift in Sources */,
+				B7F171B929A6438B00853A54 /* RainModelTests.swift in Sources */,
 				B7F171B529A40E7B00853A54 /* WindModelTests.swift in Sources */,
 				B748802D29A125A500FEB9BD /* WeatherRepositoryTests.swift in Sources */,
 				B748802729A1232000FEB9BD /* MainWeatherModelTests.swift in Sources */,
