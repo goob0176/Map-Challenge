@@ -40,7 +40,7 @@ final class PlaceWeatherModelTests: XCTestCase {
         XCTAssertNotNil(model)
         XCTAssertEqual(
             model?.infoValue, [
-                "Temp: 20",
+                "Temp: 20.0",
                 "Humidity: 5",
                 "Wind: 0.62",
                 "Rain: 3.51"
