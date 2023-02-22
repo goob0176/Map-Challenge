@@ -56,4 +56,18 @@ struct RequestsFactory {
             method: .get
         )
     }
+    
+    static func zipRequest(_ zipCode: Int) -> some Requestable {
+        NetworkRequest(
+            host: Constants.host,
+            path: Constants.Paths.weather,
+            params: [
+                "zip": "\(zipCode)",
+                "units": Constants.celciusMetricParam,
+                "appId": Constants.appId
+            ],
+            timeoutInterval: Constants.timeoutInterval,
+            method: .get
+        )
+    }
 }

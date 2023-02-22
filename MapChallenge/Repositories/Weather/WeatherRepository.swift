@@ -23,12 +23,23 @@ struct WeatherRepository: WeatherRepositoryType {
     }
     
     func fetchWeather(for title: String, completion: @escaping WeatherResponse) {
-        fetchPlace(title) { result in
-            switch result {
-            case .success(let model):
-                fetchWeather(for: model.lat, lon: model.lon, completion: completion)
-            case .failure(let error):
-                completion(.failure(error))
+        if let zipCode = Int(title) {
+            fetchZip(zipCode) { result in
+                switch result {
+                case .success(let model):
+                    completion(.success(model))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        } else {
+            fetchPlace(title) { result in
+                switch result {
+                case .success(let model):
+                    fetchWeather(for: model.lat, lon: model.lon, completion: completion)
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
         }
     }
@@ -55,6 +66,21 @@ struct WeatherRepository: WeatherRepositoryType {
 // MARK: - Private implementation
 
 private extension WeatherRepository {
+    func fetchZip(_ zipCode: Int, completion: @escaping WeatherResponse) {
+        dataService.handle(
+            request: RequestsFactory.zipRequest(zipCode),
+            responseType: PlaceWeatherModel.self,
+            completion: { result in
+                switch result {
+                case .success(let model):
+                    completion(.success(model))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        )
+    }
+    
     func fetchPlace(_ title: String, completion: @escaping GeolocationResponse) {
         dataService.handle(
             request: RequestsFactory.geocodingRequest(title),

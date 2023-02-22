@@ -26,6 +26,18 @@ final class WeatherRepositoryTests: XCTestCase {
                 XCTFail("Error should not be thrown!")
             }
         }
+        
+        repository.fetchWeather(for: "94040") { result in
+            switch result {
+            case .success(let model):
+                XCTAssertEqual(model.main?.temp, 20.0)
+                XCTAssertEqual(model.main?.humidity, 5)
+                XCTAssertEqual(model.coord?.lat, 44.34)
+                XCTAssertEqual(model.coord?.lon, 10.99)
+            case .failure:
+                XCTFail("Error should not be thrown!")
+            }
+        }
     }
     
     func testErrorRaising() {
