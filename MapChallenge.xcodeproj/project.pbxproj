@@ -436,8 +436,7 @@
 		B748804B29A2529300FEB9BD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B7487FC929A10ECA00FEB9BD /* Main.storyboard */,
-				B7487FC729A10ECA00FEB9BD /* MapViewController.swift */,
+				B7F171CE29A68B0C00853A54 /* Map */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -557,6 +556,15 @@
 				B748805429A254C600FEB9BD /* UIView+Ex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B7F171CE29A68B0C00853A54 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				B7487FC929A10ECA00FEB9BD /* Main.storyboard */,
+				B7487FC729A10ECA00FEB9BD /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
