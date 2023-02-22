@@ -7,6 +7,14 @@
 
 import Foundation
 
+// MARK: Constants
+
+private struct Constants {
+    static let missedValueString = ": -"
+}
+
+// MARK: HighestValue
+
 enum HighestValue: CaseIterable {
     case hottestTemperature
     case mostHumidity
@@ -19,16 +27,21 @@ extension HighestValue {
         guard let model = model else {
             return ""
         }
+        
+        var infoString: String
+        
         switch self {
         case .hottestTemperature:
-            return DescriptionConstructor.formString(Localization.hottestTempMessage, value: model.main?.temp)
+            infoString = DescriptionConstructor.formString(Localization.hottestTempMessage, value: model.main?.temp)
         case .mostHumidity:
-            return DescriptionConstructor.formString(Localization.mostHumidityMessage, value: model.main?.humidity)
+            infoString = DescriptionConstructor.formString(Localization.mostHumidityMessage, value: model.main?.humidity)
         case .mostWind:
-            return DescriptionConstructor.formString(Localization.mostWindMessage, value: model.wind?.speed)
+            infoString = DescriptionConstructor.formString(Localization.mostWindMessage, value: model.wind?.speed)
         case .mostRain:
-            return DescriptionConstructor.formString(Localization.mostRainMessage, value: model.rain?.rainPerHour)
+            infoString = DescriptionConstructor.formString(Localization.mostRainMessage, value: model.rain?.rainPerHour)
         }
+        
+        return  infoString.contains(Constants.missedValueString) ? infoString : "\(infoString) \(model.direction ?? "")"
     }
 
 }

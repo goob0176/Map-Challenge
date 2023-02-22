@@ -48,12 +48,12 @@ struct MapScreenViewModel: MapScreenViewModelType {
             return
         }
         let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-        let locations = locationsCalculator.locations(from: coordinate, wideDistanse: Self.kSideLocationsOffsetMeters)
+        let sideLocations = locationsCalculator.locations(from: coordinate, wideDistanse: Self.kSideLocationsOffsetMeters)
         
         let group = DispatchGroup()
         var weatherModels = [PlaceWeatherModel]()
         
-        fetchSideLocations(using: group, from: locations) { weatherModels.append($0) }
+        fetchWeatherForSideLocations(using: group, from: sideLocations) { weatherModels.append($0) }
         
         group.notify(queue: .main) {
             coordinator.placeSideLocationsMarkers(on: weatherModels)
@@ -65,16 +65,17 @@ struct MapScreenViewModel: MapScreenViewModelType {
 // MARK: - Private implementation
 
 private extension MapScreenViewModel {
-    func fetchSideLocations(
+    func fetchWeatherForSideLocations(
         using group: DispatchGroup,
-        from locations: [CLLocationCoordinate2D],
+        from sideLocations: [SideLocationModel],
         onItemReceived: @escaping (PlaceWeatherModel)->Void
     ) {
-        locations.forEach { coordinate in
+        sideLocations.forEach { sideLocation in
             group.enter()
-            weatherRepository.fetchWeather(for: coordinate.latitude, lon: coordinate.longitude) { result in
+            weatherRepository.fetchWeather(for: sideLocation.coordinate.latitude, lon: sideLocation.coordinate.longitude) { result in
                 switch result {
-                case .success(let model):
+                case .success(var model):
+                    model.direction = sideLocation.direction.rawValue
                     onItemReceived(model)
                 case .failure(let error):
                     coordinator.presentError(with: error.localizedDescription)

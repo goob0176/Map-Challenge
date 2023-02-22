@@ -10,4 +10,5 @@ import Foundation
 protocol PinAnnotation: AnyObject {
     var annotationViewModel: AnnotationViewModel { get }
     var reuseId: String { get }
+    var shouldHaveCallout: Bool { get }
 }

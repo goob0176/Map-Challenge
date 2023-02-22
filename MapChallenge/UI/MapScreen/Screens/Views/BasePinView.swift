@@ -12,7 +12,7 @@ private struct Constants {
     static let cornerRadius = 12.0
     static let labelMinimumScaleFactor = 0.7
     static let sideOffset = 16.0
-    static let containerViewFrame = CGRect(x: 0, y: 0, width: 200.0, height: 100.0)
+    static let containerViewFrame = CGRect(x: 0, y: 0, width: 200.0, height: 120.0)
 }
 
 final class BasePinView: MKAnnotationView {
@@ -50,8 +50,6 @@ final class BasePinView: MKAnnotationView {
     private var onItemTapped: (()->Void)?
     
     private func setupView() {
-        canShowCallout = true
-        detailCalloutAccessoryView = calloutButton
         
         addSubview(containerView)
         containerView.addSubview(weatherLabel)
@@ -71,5 +69,10 @@ extension BasePinView: PinView {
         weatherLabel.text = model.value
         onItemTapped = model.onItemTapped
         annotation = pinAnnotation as? MKAnnotation
+        
+        if pinAnnotation.shouldHaveCallout {
+            canShowCallout = true
+            detailCalloutAccessoryView = calloutButton
+        }
     }
 }

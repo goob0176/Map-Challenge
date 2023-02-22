@@ -10,4 +10,5 @@ import Foundation
 struct AnnotationViewModel {
     let value: String
     let onItemTapped: (()->Void)?
+    var shouldHaveCallout = false
 }

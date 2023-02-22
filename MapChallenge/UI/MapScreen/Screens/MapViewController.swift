@@ -76,9 +76,10 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-        guard views.count == 1,
-               let view = views.first as? BasePinView,
-               let annotation = view.annotation else {
+        guard let view = views.first as? BasePinView,
+              let annotation = view.annotation,
+              let pinAnnotation = view.annotation as? PinAnnotation,
+              pinAnnotation.shouldHaveCallout else {
             return
         }
         mapView.selectAnnotation(annotation, animated: false)

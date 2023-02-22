@@ -59,6 +59,8 @@
 		B7F171B729A640BB00853A54 /* RainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B629A640BB00853A54 /* RainModel.swift */; };
 		B7F171B929A6438B00853A54 /* RainModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B829A6438B00853A54 /* RainModelTests.swift */; };
 		B7F171BD29A6582600853A54 /* DescriptionConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171BC29A6582600853A54 /* DescriptionConstructor.swift */; };
+		B7F171C229A6682F00853A54 /* SideLocatiionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171C129A6682F00853A54 /* SideLocatiionModel.swift */; };
+		B7F171C429A668A500853A54 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171C329A668A500853A54 /* Direction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		B7F171B629A640BB00853A54 /* RainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainModel.swift; sourceTree = "<group>"; };
 		B7F171B829A6438B00853A54 /* RainModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainModelTests.swift; sourceTree = "<group>"; };
 		B7F171BC29A6582600853A54 /* DescriptionConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionConstructor.swift; sourceTree = "<group>"; };
+		B7F171C129A6682F00853A54 /* SideLocatiionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideLocatiionModel.swift; sourceTree = "<group>"; };
+		B7F171C329A668A500853A54 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +487,7 @@
 		B764B5E829A25D4400B4D328 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				B7F171C529A668C700853A54 /* SideLocations */,
 				B7F171AF29A3FB9500853A54 /* MapWeather */,
 				B764B5E929A25DEE00B4D328 /* Annotation */,
 			);
@@ -543,6 +548,15 @@
 				B7F171BC29A6582600853A54 /* DescriptionConstructor.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B7F171C529A668C700853A54 /* SideLocations */ = {
+			isa = PBXGroup;
+			children = (
+				B7F171C329A668A500853A54 /* Direction.swift */,
+				B7F171C129A6682F00853A54 /* SideLocatiionModel.swift */,
+			);
+			path = SideLocations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -679,6 +693,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7F171B329A40E2600853A54 /* WindModel.swift in Sources */,
+				B7F171C229A6682F00853A54 /* SideLocatiionModel.swift in Sources */,
 				B748803829A13E2300FEB9BD /* WeatherCoordinationsModel.swift in Sources */,
 				B748804829A24BBB00FEB9BD /* MapCoordinatorType.swift in Sources */,
 				B748801829A1164700FEB9BD /* WeatherRepository.swift in Sources */,
@@ -690,6 +705,7 @@
 				B748800429A1104400FEB9BD /* NetworkError.swift in Sources */,
 				B7F171BD29A6582600853A54 /* DescriptionConstructor.swift in Sources */,
 				B748801C29A116A600FEB9BD /* WeatherRepositoryType.swift in Sources */,
+				B7F171C429A668A500853A54 /* Direction.swift in Sources */,
 				B7487FF929A10F5500FEB9BD /* Requestable.swift in Sources */,
 				B7F171B129A404E900853A54 /* MapWeatherHighestValue.swift in Sources */,
 				B748801129A1127600FEB9BD /* URLRequestConstructor.swift in Sources */,

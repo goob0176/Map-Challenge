@@ -9,5 +9,5 @@ import Foundation
 import CoreLocation
 
 protocol LocationCalculator {
-    func locations(from coordinate: CLLocationCoordinate2D, wideDistanse: Double) -> [CLLocationCoordinate2D]
+    func locations(from coordinate: CLLocationCoordinate2D, wideDistanse: Double) -> [SideLocationModel]
 }

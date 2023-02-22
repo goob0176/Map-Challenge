@@ -30,6 +30,7 @@ struct MapCoordinator: MapCoordinatorType {
             value: model.infoValue,
             annotationReuseId: BasePinView.typeString,
             shouldCenterTheScreenAroundCoordinate: true,
+            shouldHaveCallout: true,
             onItemTapped: onItemTapped
         )
     }
@@ -66,6 +67,7 @@ private extension MapCoordinator {
         value: String,
         annotationReuseId: String,
         shouldCenterTheScreenAroundCoordinate: Bool = false,
+        shouldHaveCallout: Bool = false,
         onItemTapped: (()->Void)? = nil
     ) {
         guard let lat = coordinatesModel?.lat,
@@ -75,7 +77,11 @@ private extension MapCoordinator {
         }
         
         let annotationViewModel = AnnotationViewModel(value: value, onItemTapped: onItemTapped)
-        let annotation = BasePinAnnotation(annotationViewModel: annotationViewModel, reuseId: annotationReuseId)
+        let annotation = BasePinAnnotation(
+            annotationViewModel: annotationViewModel,
+            reuseId: annotationReuseId,
+            shouldHaveCallout: shouldHaveCallout
+        )
         let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         annotation.coordinate = coordinate
         mapView.addAnnotation(annotation)
