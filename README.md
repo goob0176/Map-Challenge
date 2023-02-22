@@ -20,7 +20,7 @@ Testing
 
 CI
 ---------------
-- Application is connected to a CI via GitHub actions to execute tests remotely after each push.
+- Application is connected to a CI via GitHub actions to execute tests remotely after each push to always be sure that my code is working on different machines and everything is not broken by the last commit.
 
 Core code overview:
 ---------------
