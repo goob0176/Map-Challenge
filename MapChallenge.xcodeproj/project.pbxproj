@@ -55,6 +55,8 @@
 		B7F171AC29A3F00900853A54 /* SideLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171AB29A3F00900853A54 /* SideLocationView.swift */; };
 		B7F171AE29A3FB8500853A54 /* AreaDetailMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171AD29A3FB8500853A54 /* AreaDetailMode.swift */; };
 		B7F171B129A404E900853A54 /* MapWeatherHighestValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B029A404E900853A54 /* MapWeatherHighestValue.swift */; };
+		B7F171B329A40E2600853A54 /* WindModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B229A40E2600853A54 /* WindModel.swift */; };
+		B7F171B529A40E7B00853A54 /* WindModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F171B429A40E7B00853A54 /* WindModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		B7F171AB29A3F00900853A54 /* SideLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideLocationView.swift; sourceTree = "<group>"; };
 		B7F171AD29A3FB8500853A54 /* AreaDetailMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetailMode.swift; sourceTree = "<group>"; };
 		B7F171B029A404E900853A54 /* MapWeatherHighestValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWeatherHighestValue.swift; sourceTree = "<group>"; };
+		B7F171B229A40E2600853A54 /* WindModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindModel.swift; sourceTree = "<group>"; };
+		B7F171B429A40E7B00853A54 /* WindModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +362,7 @@
 				B748801D29A1172F00FEB9BD /* PlaceWeatherModel.swift */,
 				B748802229A11E0D00FEB9BD /* MainWeatherModel.swift */,
 				B748803729A13E2300FEB9BD /* WeatherCoordinationsModel.swift */,
+				B7F171B229A40E2600853A54 /* WindModel.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				B748802629A1232000FEB9BD /* MainWeatherModelTests.swift */,
 				B748802A29A1247B00FEB9BD /* PlaceWeatherModelTests.swift */,
 				B748803929A13FF400FEB9BD /* WeatherCoordinatesModel.swift */,
+				B7F171B429A40E7B00853A54 /* WindModelTests.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -642,6 +648,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F171B329A40E2600853A54 /* WindModel.swift in Sources */,
 				B748803829A13E2300FEB9BD /* WeatherCoordinationsModel.swift in Sources */,
 				B748804829A24BBB00FEB9BD /* MapCoordinatorType.swift in Sources */,
 				B748801829A1164700FEB9BD /* WeatherRepository.swift in Sources */,
@@ -688,6 +695,7 @@
 				B748803329A1327300FEB9BD /* MocksDictionaries.swift in Sources */,
 				B748802529A122D400FEB9BD /* GeolocationModelTests.swift in Sources */,
 				B748803A29A13FF400FEB9BD /* WeatherCoordinatesModel.swift in Sources */,
+				B7F171B529A40E7B00853A54 /* WindModelTests.swift in Sources */,
 				B748802D29A125A500FEB9BD /* WeatherRepositoryTests.swift in Sources */,
 				B748802729A1232000FEB9BD /* MainWeatherModelTests.swift in Sources */,
 				B748803129A129D100FEB9BD /* DataServiceMock.swift in Sources */,

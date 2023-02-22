@@ -10,6 +10,7 @@ import Foundation
 enum HighestValue: CaseIterable {
     case hottestTemperature
     case mostHumidity
+    case mostWind
 }
 
 extension HighestValue {
@@ -22,6 +23,8 @@ extension HighestValue {
             return formString(Localization.hottestTempMessage, value: model.main?.temp)
         case .mostHumidity:
             return formString(Localization.mostHumidityMessage, value: model.main?.humidity)
+        case .mostWind:
+            return formString(Localization.mostWindMessage, value: model.wind?.speed)
         }
     }
     

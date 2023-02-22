@@ -17,11 +17,13 @@ final class PlaceWeatherModelTests: XCTestCase {
         
         XCTAssertNotNil(model.main)
         XCTAssertNotNil(model.coord)
+        XCTAssertNotNil(model.wind?.speed)
         
         XCTAssertEqual(model.main?.temp, 20.0)
         XCTAssertEqual(model.main?.humidity, 5)
         
         XCTAssertEqual(model.coord?.lat, 44.34)
         XCTAssertEqual(model.coord?.lon, 10.99)
+        XCTAssertEqual(model.wind?.speed, 0.62)
     }
 }

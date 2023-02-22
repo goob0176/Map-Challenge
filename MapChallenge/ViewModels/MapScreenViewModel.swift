@@ -93,6 +93,10 @@ private extension MapScreenViewModel {
             .model(
                 sortedFrom: sideLocations, using: { $0.main?.humidity ?? 0 > $1.main?.humidity ?? 0 },
                 highestValue: .mostHumidity
+            ),
+            .model(
+                sortedFrom: sideLocations, using: { $0.wind?.speed ?? 0.0 > $1.wind?.speed ?? 0.0 },
+                highestValue: .mostWind
             )
         ]
         coordinator.presentAreaDetailsAlert(with: mapModels)
