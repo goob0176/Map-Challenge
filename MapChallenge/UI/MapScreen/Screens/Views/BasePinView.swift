@@ -8,12 +8,16 @@
 import UIKit
 import MapKit
 
+// MARK: - Constants
+
 private struct Constants {
     static let cornerRadius = 12.0
     static let labelMinimumScaleFactor = 0.7
     static let sideOffset = 16.0
     static let containerViewFrame = CGRect(x: 0, y: 0, width: 200.0, height: 120.0)
 }
+
+// MARK: - BasePinView
 
 final class BasePinView: MKAnnotationView {
     private lazy var weatherLabel: UILabel = {
@@ -63,6 +67,8 @@ final class BasePinView: MKAnnotationView {
     }
 
 }
+
+// MARK: - PinView conformance
 
 extension BasePinView: PinView {
     func setup(with model: AnnotationViewModel, and pinAnnotation: PinAnnotation) {

@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import MapKit
 
+// MARK: - MapCoordinator
+
 struct MapCoordinator: MapCoordinatorType {
     private let sourceViewController: UIViewController
     private let mapView: MKMapView
@@ -60,6 +62,8 @@ struct MapCoordinator: MapCoordinatorType {
         sourceViewController.present(alert, animated: true)
     }
 }
+
+// MARK: - Private implementation
 
 private extension MapCoordinator {
     func addAnnotation(
