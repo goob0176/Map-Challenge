@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
@@ -14,16 +14,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="MapChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kaj-KD-RBt">
-                                <rect key="frame" x="0.0" y="134" width="393" height="718"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kaj-KD-RBt">
+                                <rect key="frame" x="0.0" y="75" width="320" height="493"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="AbV-iF-h1A">
-                                <rect key="frame" x="0.0" y="78" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="19" width="320" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="55L-A8-MEQ"/>
@@ -35,7 +34,11 @@
                         <constraints>
                             <constraint firstItem="AbV-iF-h1A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5SB-wo-g5I"/>
                             <constraint firstItem="AbV-iF-h1A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MWX-TP-CJi"/>
+                            <constraint firstAttribute="bottom" secondItem="Kaj-KD-RBt" secondAttribute="bottom" id="NYt-rH-cnw"/>
+                            <constraint firstItem="Kaj-KD-RBt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bM0-rR-zP8"/>
+                            <constraint firstItem="Kaj-KD-RBt" firstAttribute="top" secondItem="AbV-iF-h1A" secondAttribute="bottom" id="e1C-mW-V86"/>
                             <constraint firstItem="AbV-iF-h1A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="nKF-Fs-jiA"/>
+                            <constraint firstAttribute="trailing" secondItem="Kaj-KD-RBt" secondAttribute="trailing" id="zT9-5h-QmO"/>
                         </constraints>
                     </view>
                     <connections>
